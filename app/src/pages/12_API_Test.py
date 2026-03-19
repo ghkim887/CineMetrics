@@ -4,6 +4,8 @@ import streamlit as st
 import requests
 from modules.nav import SideBarLinks
 
+st.set_page_config(layout='wide')
+
 SideBarLinks()
 
 st.write("# Accessing a REST API from Within Streamlit")
