@@ -4,8 +4,13 @@ import os
 import logging
 
 from backend.db_connection import init_app as init_db
-from backend.simple.simple_routes import simple_routes
-from backend.ngos.ngo_routes import ngos
+from backend.movies.movie_routes import movies
+from backend.users.user_routes import users
+from backend.reviews.review_routes import reviews
+from backend.recommendations.recommendation_routes import recommendations
+from backend.watchlists.watchlist_routes import watchlists
+from backend.admin.admin_routes import admin_bp
+from backend.analytics.analytics_routes import analytics
 
 
 def create_app():
@@ -35,7 +40,12 @@ def create_app():
     # Register the routes from each Blueprint with the app object
     # and give a url prefix to each.
     app.logger.info("create_app(): registering blueprints")
-    app.register_blueprint(simple_routes)
-    app.register_blueprint(ngos, url_prefix="/ngo")
+    app.register_blueprint(movies, url_prefix='/movies')
+    app.register_blueprint(users, url_prefix='/users')
+    app.register_blueprint(reviews, url_prefix='/reviews')
+    app.register_blueprint(recommendations, url_prefix='/recommendations')
+    app.register_blueprint(watchlists, url_prefix='/watchlists')
+    app.register_blueprint(admin_bp, url_prefix='/admin')
+    app.register_blueprint(analytics, url_prefix='/analytics')
 
     return app

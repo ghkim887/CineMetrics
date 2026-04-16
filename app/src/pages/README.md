@@ -1,7 +1,10 @@
-# `pages` Folder
+# CineMetrics Pages
 
-This folder contains all the pages that will be part of the application. Details on required numbers will be provided in the Phase 3 documentation.
+This folder contains all Streamlit pages for the CineMetrics application, organized by persona:
 
-These pages are meant to show you an example of some of the features of Streamlit and the way we will limit functionality access by role/persona. It is not meant to represent a complete application.
+- **00-06**: Casual Viewer (Jake Morrison) pages
+- **10-16**: Movie Enthusiast (Priya Sharma) pages
+- **20-26**: Platform Admin (Marcus Chen) pages
+- **30-36**: Data Analyst (Elena Vasquez) pages
 
-TODO: Describe the pages folder and include link to documentation. Don't forget about ordering of pages.
+Page numbering controls the display order in the sidebar navigation.
